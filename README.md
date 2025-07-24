@@ -14,49 +14,31 @@ BATCH DURATION: JUNE 17th,2025 to AUGUST 2ND,2025 (6 Weeks)
 
 MENTOR NAME: Neela Santhosh Kumar
 
-DISCRIPTION:
+DESCRIPTION: The Push Button Counter is a basic yet highly educational embedded systems project that involves using a tactile push button to increment a numerical value and display it on an output device, such as a 7-segment display or an LCD screen. It is a commonly implemented mini-project for students learning microcontrollers, digital electronics, or embedded C/C++ programming. This project introduces important concepts like digital input reading, signal debouncing, real-time display updates, and control logic.
 
-ESP32 PUSH BUTTON COUNTER
+Objective: The main objective of the Push Button Counter is to detect each valid press of a button and increase a counter value accordingly. This counter is then displayed in real-time to the user. The goal is to create a reliable system that only increments once per press, regardless of electrical noise or bouncing effects inherent in mechanical switches.
 
-This project is a push-button counter using an ESP32 and Arduino IDE. Every time the button is pressed, the counter value increases, and the result is displayed on the Serial Monitor.
+Working Principle: When the push button is pressed, it sends a digital HIGH (or LOW, depending on configuration) signal to a microcontroller’s GPIO (General Purpose Input Output) pin. The microcontroller monitors this pin using a polling or interrupt method. On detecting a valid state change, it increases an internal counter variable by one. This new value is then displayed using a suitable output device.
 
-COMPONENTS REQUIRED:--
+To ensure accurate counting, debouncing is essential. Mechanical buttons can generate multiple transitions in milliseconds due to physical bounce, leading to false multiple increments. Debouncing can be handled either in software using delays and state checking, or in hardware using resistors and capacitors (RC filters).
 
-•ESP32 Development Board
+Components Used: Microcontroller (e.g., Arduino Uno, ESP32, or ATmega328P)
 
-•Push Button
+Push Button
 
-•10kΩ Resistor (optional for pull-down)
+Pull-down or Pull-up Resistor (typically 10kΩ)
 
-•Connecting Wires
+7-Segment Display or 16x2 LCD Display
 
-•Breadboard
+Breadboard and Jumper Wires
 
-CIRCUIT CONNECTION:--
+USB Cable for Programming
 
-Push Button: One side to GPIO4 and the other to GND.
+CIRCUTI DIAGRAM:
 
-Internal Pull-up Resistor: Used to keep the button in a stable HIGH state when not pressed.
+<img width="1643" height="943" alt="circuit diagram" src="https://github.com/user-attachments/assets/107f238d-91a1-4ef5-907f-a9239969d5c3" />
 
-WORKING:--
+OUTPUT:
 
-The ESP32 detects when the button is pressed.
+<img width="1380" height="1039" alt="OUTPUT" src="https://github.com/user-attachments/assets/ce76c2fc-9375-4285-9e1a-606aeb6c95c6" />
 
-Each press increments a counter.
-
-The updated count is printed to the Serial Monitor.
-How to Run the Project-->
-
-Clone this repository
-
-https://github.com/kaifshaik39/PUSH-BUTTON-COUNTER1
-
-Open the .ino file in Arduino IDE.
-
-Connect your ESP32 board and select the correct COM Port.
-
-Upload the code to the ESP32.
-
-Open Serial Monitor (Baud rate: 115200).
-
-Press the button and see the count increase in the Serial Monitor.
